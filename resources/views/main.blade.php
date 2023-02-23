@@ -12,8 +12,8 @@
     </head>
     <body class="antialiased">
         
-        <x-Sidebar />
         <x-navbar />
+        <x-Sidebar />
 
     </body>
 </html>

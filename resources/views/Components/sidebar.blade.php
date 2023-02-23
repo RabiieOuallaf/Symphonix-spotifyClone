@@ -1,14 +1,9 @@
 <section class="bg-neutral-900 w-[20%] h-screen ">
     <!-- Site logo and back button -->
-   <div class="logo flex flex-col text-center">
 
-        <span class="text-2xl text-white mt-2">Symphonix</span>
-        <div class="back-btn">
-            <input class="btn my-10 bg-violet-600 text-white z-10 top-10 mx-5 border px-6 py-2 rounded-md hover:bg-inherit duration-200" type="submit" value="back" >
-        </div>
-        
-        
-   </div>
+    <div class="back-btn flex flex-col text-center">
+        <input class="btn my-10 bg-violet-600 text-white z-10 top-10 mx-5 border px-6 py-2 rounded-md hover:bg-inherit duration-200" type="submit" value="back" >
+    </div>
 
    <div class="sidebar-sections text-zinc-400 flex flex-col text-center gap-7 my-10">
 
