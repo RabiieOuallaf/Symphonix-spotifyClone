@@ -13,6 +13,7 @@
     <body class="antialiased">
         
         <x-Sidebar />
+        <x-navbar />
 
     </body>
 </html>
