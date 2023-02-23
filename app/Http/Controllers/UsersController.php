@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
-class Users extends Controller
+class UsersController extends Controller
 {
     // Load the register page 
     public function registerPage() {
@@ -15,7 +15,7 @@ class Users extends Controller
     // load the login page 
 
     public function loginPage() {
-        return view('users.login');
+        return view('users.loginPage');
     }
     
 

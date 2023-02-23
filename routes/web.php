@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\User;
+use App\Http\Controllers\UsersController;
 use app\Http\Controllers\Bands;
 use app\Http\Controllers\Musics;
 use app\Http\Controllers\Clients;
@@ -23,13 +23,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Register routing 
-Route::get('/register' , [Users::class , 'RegisterPage']);
-Route::post('/register/authentication', [User::class], 'storeUserData');
+Route::get('/register' , [UsersController::class , 'RegisterPage']);
+Route::post('/register/authentication', [UsersController::class, 'storeUserData']);
 
 // Login routing 
 
-Route::get('/login', [Users::class, 'loginPage']);
-Route::post('/login/authentication', [Users::class, 'credentialsVerification']);
+Route::get('/login', [UsersController::class, 'loginPage']);
+Route::post('/login/authentication', [UsersController::class, 'credentialsVerification']);
 
 // logout route
-Route::get('/logout', [Users::class, 'logout']);
+Route::get('/logout', [UsersController::class, 'logout']);
