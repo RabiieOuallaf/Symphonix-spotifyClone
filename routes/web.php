@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Register routing 
-Route::get('/register' , [UsersController::class , 'RegisterPage']);
+Route::get('/register' , [UsersController::class , 'registerPage']);
 Route::post('/register/authentication', [UsersController::class, 'storeUserData']);
 
 // Login routing 

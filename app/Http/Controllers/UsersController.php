@@ -10,7 +10,7 @@ class UsersController extends Controller
 {
     // Load the register page 
     public function registerPage() {
-        return view('users.register');
+        return view('users.registerPage');
     }
     // load the login page 
 
