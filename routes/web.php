@@ -20,7 +20,7 @@ use app\Http\Controllers\Artists;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 // Register routing 
 Route::get('/register' , [UsersController::class , 'registerPage']);
@@ -33,3 +33,4 @@ Route::post('/login/authentication', [UsersController::class, 'credentialsVerifi
 
 // logout route
 Route::get('/logout', [UsersController::class, 'logout']);
+
