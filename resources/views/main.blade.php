@@ -10,10 +10,25 @@
         <!-- fontawesome -->
         <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
     </head>
-    <body class="antialiased">
+    <body class="antialiased overflow-hidden overflow-y-auto bg-neutral-800" >
         
-        <x-navbar />
-        <x-Sidebar />
+        <section class="homepage w-[100%]">
+            
+            <div class="flex flex-col">
+
+                <x-navbar class="flex-1"/>     
+                <div class="flex justify-center items-center w-[130%]"> 
+                    <x-playlist />
+                </div>
+                <x-Sidebar class="flex-1"/>
+
+            </div>
+
+            
+
+        </section>
+        
+        
 
     </body>
 </html>

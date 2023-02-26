@@ -1,4 +1,4 @@
-<section class="bg-neutral-900 w-[20%] h-screen ">
+<section class="bg-neutral-900 w-[20%] h-screen absolute top-20">
     <!-- Site logo and back button -->
 
     <div class="back-btn flex flex-col text-center">
