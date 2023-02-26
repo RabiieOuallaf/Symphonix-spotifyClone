@@ -15,12 +15,12 @@
         
         <div class="login-image w-[42%]">
             <!-- Register button -->
-            <input class="btn absolute text-white z-10 top-10 mx-5 border px-4 py-2 rounded-md hover:bg-violet-900 duration-200" type="submit" value="Register" >
+            <a href="/register"><button class="btn absolute text-white z-10 top-10 mx-5 border px-4 py-2 rounded-md hover:bg-violet-900 duration-200" type="submit" value="Register">Register</button></a>
             <img src="{{asset('images/backgrounds/loginBackground.jpg')}}" alt="phone playing spotify" class="login-img relative rounded-md">
         </div>
         
-        <form action="" class="login-form w-[58%] flex flex-col gap-10 justify-center items-center m-auto">
-
+        <form method="POST" action="/login/authentication" class="login-form w-[58%] flex flex-col gap-10 justify-center items-center m-auto">
+                @csrf
                 <!-- greeting -->
                 <div class="greeting text-center">
                     <h2 class="text-4xl font-bold text-white">Welcome home 👋</h2>

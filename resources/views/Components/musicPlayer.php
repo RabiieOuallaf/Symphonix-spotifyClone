@@ -4,9 +4,9 @@
     use Illuminate\Console\View\Components\Component;
 
 
-    class Playlist extends Component {
+    class Musicplayer extends Component {
         public function render()
         {
-            return view('ComponentsmusicComponents.playlist');
+            return view('Components.musicComponents.musicplayer');
         }
     }
