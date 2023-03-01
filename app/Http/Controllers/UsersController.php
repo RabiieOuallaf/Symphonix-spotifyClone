@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
 class UsersController extends Controller
@@ -52,19 +53,21 @@ class UsersController extends Controller
     // validate user's credentials (login)
 
     public function credentialsVerification(Request $request) {
-
-        $formFields = $request->validate([
-            'email' => ['required', 'email', Rule::unique('users', 'email')],
-            'password' => 'required'
+        
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required']
         ]);
-
-        if(auth()->attempt($formFields)) {
+    
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
-            return redirect('/')->with('message', 'Welcome back!');
+    
+            return redirect()->intended('/');
         }
-
-        return back()->withErrors(['email' => 'invalid credentials']);
+    
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.'
+        ]);
     }
 
     // logout 

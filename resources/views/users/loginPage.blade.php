@@ -28,13 +28,13 @@
                 </div>
 
                 <!-- email input -->
-                <div class="username flex flex-col">
+                <div class="email flex flex-col">
                     <label for="email" class="text-white text-xl font-semibold my-3">Email :</label>
                     <input type="text" name="email" placeholder="Rabie@gmail.com" class="w-[100%] h-8 p-5 text-white radius-full mx-5 rounded-md border-white border-2 border-white bg-inherit ">
                 </div>
     
                 <!-- password -->
-                <div class="username flex flex-col">
+                <div class="password flex flex-col">
                     <label for="name" class="text-white text-xl  font-semibold my-3">Password :</label>
                     <input type="password" name="password" placeholder="****************************" class="w-[100%] h-8 p-5 text-white radius-full mx-5 rounded-md border-white border-2 border-white bg-inherit">
                 </div>
