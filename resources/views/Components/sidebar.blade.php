@@ -1,4 +1,4 @@
-<section class="bg-neutral-900 w-[20%] h-screen absolute top-20">
+<section class="bg-neutral-900 w-[20%] h-[100%] absolute top-20">
     <!-- Site logo and back button -->
 
     <div class="back-btn flex flex-col text-center">
@@ -43,7 +43,8 @@
         <!-- logout -->
         <div class="logout cursor-pointer hover:text-violet-600 ease-in-out duration-200 mx-2">
             <i class="fa-solid fa-door-open"></i>
-            <span>Logout</span>
+            <a href="logout">logout</a>
+
         </div>
    </div>
 

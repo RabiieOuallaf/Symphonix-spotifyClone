@@ -7,6 +7,6 @@
     class Musicplayer extends Component {
         public function render()
         {
-            return view('Components.musicComponents.musicplayer');
+            return view('Components.musicplayer');
         }
     }
