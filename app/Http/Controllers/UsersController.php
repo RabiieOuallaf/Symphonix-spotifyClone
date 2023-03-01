@@ -22,10 +22,9 @@ class UsersController extends Controller
 
     // store the user's data (register)
     public function storeUserData(Request $request) {
-        
        
         $formFields = $request->validate([
-            'username' => 'required',
+            'username' => ['required', 'min:2',Rule::unique('users', 'username')],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => 'required'
         ]);
@@ -35,11 +34,11 @@ class UsersController extends Controller
         $formFields['password'] = bcrypt($formFields['password']);
         
         
-
+        
         // Create the user 
-
+        
         $user = User::create($formFields);
-
+        
         if ($user) {
 
             auth()->login($user);
