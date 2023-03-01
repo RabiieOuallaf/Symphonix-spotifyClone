@@ -19,8 +19,8 @@
             <img src="{{asset('images/backgrounds/loginBackground.jpg')}}" alt="phone playing spotify" class="register-img relative rounded-md">
         </div>
         
-        <form action="" class="register-form w-[58%] flex flex-col gap-10 justify-center items-center m-auto">
-
+        <form method="POST" action="/register/authentication" class="register-form w-[58%] flex flex-col gap-10 justify-center items-center m-auto">
+                @csrf
                 <!-- greeting -->
                 <div class="greeting text-center">
                     <h2 class="text-4xl font-bold text-white">Welcome home 👋</h2>

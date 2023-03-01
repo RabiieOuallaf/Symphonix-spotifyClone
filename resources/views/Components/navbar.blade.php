@@ -14,7 +14,9 @@
         <div class="search-section flex mx-5 my-4 w-[100%]">
             <input type="text" placeholder="what do you want to listen to ?" class="w-[100%] h-8 p-5 text-white radius-full mx-10 rounded-md border-white border-2 border-white bg-inherit">
             <i class="fa-solid fa-magnifying-glass text-white my-4"></i>
+            <a href="logout">logout</a>
         </div>
+        
     </div>
     
 

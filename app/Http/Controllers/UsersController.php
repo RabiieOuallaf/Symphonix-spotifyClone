@@ -22,27 +22,32 @@ class UsersController extends Controller
 
     // store the user's data (register)
     public function storeUserData(Request $request) {
+        
+       
         $formFields = $request->validate([
-            'name' => ['required', 'min:2'],
+            'username' => 'required',
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => 'required'
         ]);
-
+        
         // Hash the password 
-
+        
         $formFields['password'] = bcrypt($formFields['password']);
+        
+        
 
         // Create the user 
 
         $user = User::create($formFields);
 
-        // Login 
+        if ($user) {
 
-        auth()->login($user);
+            auth()->login($user);
+            return redirect('/')->with('message', 'You logged in successfully!');
+        } else {
+            return redirect('/register')->with('error', 'Failed to create user. Please try again.');
+        }
 
-        // Redirect the user to the main page 
-
-        return redirect('/')->with('message', 'You logged in seccussfuly!');
     }
 
     // validate user's credentials (login)
@@ -71,6 +76,6 @@ class UsersController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return back()->with('message', 'You logedout!');
+        return redirect('/login')->with('message', 'You logedout!');
     }
 }
