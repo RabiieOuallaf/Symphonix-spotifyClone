@@ -3,7 +3,7 @@
     <h2 class="text-3xl font-semibold text-white my-5" style="margin-left: -5rem;">Made for you </h2>
     <div class="playlists-container grid justify-content-center grid-cols-4 gap-x-10 w-[100%]">
 
-        <div class="playlist">
+        <div class="playlist" onclick="location.href='/music'">
 
             <div class="bg-gray-900 shadow-lg rounded p-3">
                 <div class="group relative">
@@ -16,7 +16,7 @@
                         </button>
 
                         <button class="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
                         </svg>
                         </button>
@@ -40,7 +40,7 @@
         <div class="playliss">
             <div class="bg-gray-900 shadow-lg rounded p-3">
                 <div class="group relative">
-                    <img class="w-full md:w-72 block rounded" src="https://upload.wikimedia.org/wikipedia/en/f/f1/Tycho_-_Epoch.jpg" alt="" />
+                    <img class="w-full md:w-72 block rounded" src="https://upload.wikimedia.org/wikipedia/en/f/f1/Tycho_-_Epoch.jpg" />
                     <div class="absolute bg-black rounded bg-opacity-0 group-hover:bg-opacity-60 w-full h-full top-0 flex items-center group-hover:opacity-100 transition justify-evenly">
                         <button class="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">

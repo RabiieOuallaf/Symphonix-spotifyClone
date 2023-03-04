@@ -6,7 +6,7 @@ use app\Http\Controllers\Bands;
 use app\Http\Controllers\Musics;
 use app\Http\Controllers\Clients;
 use app\Http\Controllers\Artists;
-
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +18,10 @@ use app\Http\Controllers\Artists;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Generale routing 
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', [PagesController::class , 'Main']);
+
 // Register routing 
 Route::get('/register' , [UsersController::class , 'registerPage']);
 Route::post('/register/authentication', [UsersController::class, 'storeUserData']);
@@ -33,4 +33,6 @@ Route::post('/login/authentication', [UsersController::class, 'credentialsVerifi
 
 // logout route
 Route::get('/logout', [UsersController::class, 'logout']);
+
+
 
