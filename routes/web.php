@@ -19,8 +19,9 @@ use App\Http\Controllers\PagesController;
 |
 */
 // Generale routing 
-
-Route::get('/', [PagesController::class , 'Main']);
+Route::get('/', [PagesController::class, 'Main'])
+    ->middleware(['auth', 'guest:login']);
+// Route::get('/music', );
 
 // Register routing 
 Route::get('/register' , [UsersController::class , 'registerPage']);
@@ -28,7 +29,7 @@ Route::post('/register/authentication', [UsersController::class, 'storeUserData'
 
 // Login routing 
 
-Route::get('/login', [UsersController::class, 'loginPage']);
+Route::get('/login', [UsersController::class, 'loginPage'])->name('login');
 Route::post('/login/authentication', [UsersController::class, 'credentialsVerification']);
 
 // logout route
