@@ -6,6 +6,7 @@ use app\Http\Controllers\Bands;
 use app\Http\Controllers\Musics;
 use app\Http\Controllers\Clients;
 use app\Http\Controllers\Artists;
+use App\Http\Controllers\MusicsController;
 use App\Http\Controllers\PagesController;
 
 /*
@@ -20,9 +21,9 @@ use App\Http\Controllers\PagesController;
 */
 // Generale routing 
 Route::get('/', [PagesController::class, 'Main'])
-    ->middleware(['auth', 'guest:login']);
-// Route::get('/music', );
+    ->middleware(['auth', 'auth:web']);
 
+Route::get('/songs', [MusicsController::class, 'displayMusic']);
 // Register routing 
 Route::get('/register' , [UsersController::class , 'registerPage']);
 Route::post('/register/authentication', [UsersController::class, 'storeUserData']);

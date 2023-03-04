@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Musics extends Controller
+class MusicsController extends Controller
 {
-    //
+    // display the music page 
+    public function displayMusic() {
+        return view('music.musicPage');
+    }
 }
