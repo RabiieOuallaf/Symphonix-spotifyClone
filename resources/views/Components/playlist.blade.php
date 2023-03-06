@@ -3,7 +3,7 @@
     <h2 class="text-3xl font-semibold text-white my-5" style="margin-left: -5rem;">Made for you </h2>
     <div class="playlists-container grid justify-content-center grid-cols-4 gap-x-10 w-[100%]">
 
-        <div class="playlist" onclick="location.href='/music'">
+        <div class="playlist" onclick="location.href='/songs'">
 
             <div class="bg-gray-900 shadow-lg rounded p-3">
                 <div class="group relative">
